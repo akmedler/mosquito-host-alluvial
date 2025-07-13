@@ -18,11 +18,11 @@ This guide explains how to create an alluvial plot in R using mosquito-host inte
 
 ```r
 mosquito_data <- read.csv("mosquito_data.csv", stringsAsFactors = FALSE)
-'''
+```
 
 ## Step 3: Install packages
 
-'''r
+```r
 install.packages("ggalluvial")
 
 install.packages("ggplot2")
@@ -30,13 +30,13 @@ install.packages("ggplot2")
 library(ggplot2)
 
 library(ggalluvial)
-'''
+```
 
 ## Step 4: Load file into R
 
-'''r
+```r
 mosquito_data <- read.csv("mosquito_data.csv", stringsAsFactors = FALSE)
-'''
+```
 
 ## Step 5: Group Data
 
@@ -50,7 +50,7 @@ flow_data <- mosquito_data %>%
 
 ## Step 6: Create Alluvial Plot
 
-'''r
+```r
 ggplot(flow_data,
        aes(axis1 = Mosquito.Species, axis2 = Host.Species, y = Frequency)) +
   geom_alluvium(aes(fill = Mosquito.Species), width = 1/12) +
@@ -62,4 +62,4 @@ ggplot(flow_data,
   labs(title = "Mosquito-Host Associations",
        y = "Frequency") +
   theme_minimal()
-'''
+```
